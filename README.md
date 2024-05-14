@@ -48,6 +48,8 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go" width="42" height="42" />
 </p>
 
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rozoomcool&layout=compact&count_private=true&theme=gruvbox" />
+
 <!--
 **rozoomcool/rozoomcool** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
