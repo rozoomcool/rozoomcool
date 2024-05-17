@@ -1,0 +1,1 @@
+const int maxContentWidth = 1100;
