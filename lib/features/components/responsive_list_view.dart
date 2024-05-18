@@ -18,10 +18,10 @@ class ResponsiveListView extends StatelessWidget {
       shrinkWrap: shrinkWrap,
       children: children.map((element) {
         return Stack(
+          alignment: AlignmentDirectional.center,
           fit: StackFit.loose,
           children: [
-            Positioned.fill(
-                child: element.background ?? const SizedBox()),
+            element.background ?? const SizedBox(),
             Center(
                 child: ConstrainedBox(
               constraints: BoxConstraints(maxWidth: maxWidth),

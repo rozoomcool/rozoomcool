@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:rozoomcool/constants/components/info_card.dart';
 
-import '../text_constants.dart';
-
+import '../../constants/text_constants.dart';
+import 'info_card.dart';
 class AboutMeContainer extends StatelessWidget {
   const AboutMeContainer({super.key, required this.maxWidth});
 

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../text_constants.dart';
+import '../../constants/text_constants.dart';
 
 class TechnologiesContainer extends StatelessWidget {
   const TechnologiesContainer({super.key, required this.maxWidth});
+
   final double maxWidth;
 
   @override
@@ -20,7 +21,9 @@ class TechnologiesContainer extends StatelessWidget {
             "Technologies",
             style: Theme.of(context).textTheme.displaySmall,
           ),
-          const SizedBox(height: 8,),
+          const SizedBox(
+            height: 8,
+          ),
           Center(
             child: Container(
               width: 100,
@@ -35,20 +38,21 @@ class TechnologiesContainer extends StatelessWidget {
             constraints: BoxConstraints(maxWidth: maxWidth.toDouble()),
             child: Row(
               mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ...techLogoLinks.map<Widget>((el) => Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(200)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SvgPicture.network(
-                      el,
-                      width: 54,
-                      height: 54,
-                    ),
-                  ),
-                ))
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(200)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SvgPicture.network(
+                          el,
+                          width: 54,
+                          height: 54,
+                        ),
+                      ),
+                    ))
               ],
             ),
           )
@@ -56,5 +60,4 @@ class TechnologiesContainer extends StatelessWidget {
       ),
     );
   }
-
 }
