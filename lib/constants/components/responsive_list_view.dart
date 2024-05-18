@@ -9,7 +9,7 @@ class ResponsiveListView extends StatelessWidget {
       this.shrinkWrap = false});
 
   final List<ResponsiveComponent> children;
-  final int maxWidth;
+  final double maxWidth;
   final bool shrinkWrap;
 
   @override
@@ -21,11 +21,11 @@ class ResponsiveListView extends StatelessWidget {
           fit: StackFit.loose,
           children: [
             Positioned.fill(
-                child: element.background ?? const SizedBox(width: 0, height: 0,)),
+                child: element.background ?? const SizedBox()),
             Center(
                 child: ConstrainedBox(
-              constraints: BoxConstraints(maxWidth: maxWidth.toDouble()),
-              child: SizedBox(width: double.infinity, child: element.content ?? const SizedBox(width: 0, height: 0,)),
+              constraints: BoxConstraints(maxWidth: maxWidth),
+              child: SizedBox(width: double.infinity, child: element.content ?? const SizedBox()),
             ))
           ],
         );

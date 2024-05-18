@@ -4,7 +4,7 @@ class ResponsiveAppBar extends StatefulWidget implements PreferredSizeWidget {
   const ResponsiveAppBar({super.key, this.logo, required this.actions, required this.maxWidth});
   final Widget? logo;
   final List<Widget> actions;
-  final int maxWidth;
+  final double maxWidth;
 
   @override
   State<ResponsiveAppBar> createState() => _ResponsiveAppBarState();
@@ -18,20 +18,19 @@ class _ResponsiveAppBarState extends State<ResponsiveAppBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Center(
-        child: ConstrainedBox(
-          constraints: BoxConstraints(maxWidth: widget.maxWidth.toDouble()),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              widget.logo ?? Container(),
-              Row(
-                children: widget.actions,
-              )
-            ],
-          ),
+      centerTitle: true,
+      title: ConstrainedBox(
+        constraints: BoxConstraints(maxWidth: widget.maxWidth),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            widget.logo ?? Container(),
+            Row(
+              children: widget.actions,
+            )
+          ],
         ),
       ),
     );

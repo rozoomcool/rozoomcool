@@ -1,1 +1,1 @@
-const int maxContentWidth = 1100;
+const double maxContentWidth = 1100;
