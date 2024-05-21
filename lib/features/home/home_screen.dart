@@ -72,9 +72,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   content: TechnologiesContainer(maxWidth: maxWidth,)
               ),
               ResponsiveComponent(
-                  content: TechnologiesContainer(maxWidth: maxWidth,)
-              ),
-              ResponsiveComponent(
                   content: const SizedBox(
                 height: 150,
               )),

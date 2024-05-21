@@ -36,21 +36,16 @@ class TechnologiesContainer extends StatelessWidget {
           ),
           ConstrainedBox(
             constraints: BoxConstraints(maxWidth: maxWidth.toDouble()),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            child: Wrap(
+              spacing: 8.0,
+              alignment: WrapAlignment.center,
               children: [
-                ...techLogoLinks.map<Widget>((el) => Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(200)),
+                ...techLogoLinks.map<Widget>((el) => SizedBox(
+                      width: 58,
+                      height: 58,
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: SvgPicture.network(
-                          el,
-                          width: 54,
-                          height: 54,
-                        ),
+                        padding: const EdgeInsets.all(4.0),
+                        child: SvgPicture.asset("assets/$el.svg"),
                       ),
                     ))
               ],
